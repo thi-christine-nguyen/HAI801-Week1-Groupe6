@@ -60,4 +60,4 @@ while len(open_list) != 0:
         closed_list.append(u)
         trier_closed_list()
 
-print(closed_list)
+print(closed_list) # Ne fonctionne pas complétement
