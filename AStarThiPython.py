@@ -9,7 +9,6 @@ class Graph:
     def get_neighbors(self, v):
         return self.adjacency_list[v]
 
-    # heuristic function with equal values for all nodes
     def h(self, n):
         H = {
             'A': 9,
@@ -25,14 +24,10 @@ class Graph:
         return H[n]
 
     def aStar(self, start, end):
-        # open_list is a list of nodes which have been visited, but who's neighbors
-        # closed_list is a list of nodes which have been visited
 
         open_list = set([start])
         closed_list = set([])
 
-        # g contains current distances from start to all other nodes
-        # the default value (if it's not found in the map) is +infinity
         g = {}
 
         g[start] = 0
